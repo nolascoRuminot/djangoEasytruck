@@ -6,6 +6,26 @@
     --dark: #404A3D;
 }
 
+.text-right{
+    text-align: right !important;
+}
+
+.d-content {
+    display: contents !important;
+}
+
+.d-grid{
+    display: grid !important;
+}
+
+.justify-items-center{
+    justify-items: center !important;
+}
+
+.btn-gray{
+    background-color: gray !important;
+    color: white !important;
+}
 
 /*** Spinner ID ***/ 
 #spinner {

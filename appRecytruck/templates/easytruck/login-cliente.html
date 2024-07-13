@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="utf-8">
-    <title>Easy Truck - Clientes</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Transporte,logistica,fletes,carga,gps" name="keywords">
-    <meta content="Easy Truck soluciona completa a la logistica de tu empresa" name="description">
-    <meta name="author" content="Nolasco Ruminot & Scarleth Ruminot" />
-
-    <!-- Fuentes de google -->
+    <head>
+        <meta charset="utf-8">
+        <title>Easy Truck - Productos</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Transporte,logistica,fletes,carga,gps" name="keywords">
+        <meta content="Easy Truck soluciona completa a la logistica de tu empresa" name="description">
+        <meta name="author" content="Nolasco Ruminot & Scarleth Ruminot" />
+    
+        <!-- Fuentes de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">   
@@ -30,7 +29,7 @@
 
         <!-- Hoja estilo adicional -->
         <link href="{% static 'easytruck/css/style.css' %}" rel="stylesheet">
-</head>
+    </head>
 
 <body>
     <!-- Spinner Start -->
@@ -62,6 +61,7 @@
     </div>
     <!-- Topbar Fin -->
 
+
     <!-- Navbar Inicio -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center">
@@ -75,8 +75,8 @@
                 <a href="{% url 'index' %}" class="nav-item nav-link">Inicio</a>
                 <a href="{% url 'nosotros' %}" class="nav-item nav-link">Nosotros</a>
                 <a href="{% url 'servicios' %}" class="nav-item nav-link">Servicios</a>
-                <a href="{% url 'productos' %}" class="nav-item nav-link">Productos</a>
-                <a href="{% url 'clientes' %}" class="nav-item nav-link active">Clientes</a>                
+                <a href="{% url 'productos' %}" class="nav-item nav-link active">Productos</a>
+                <a href="{% url 'clientes' %}" class="nav-item nav-link">Clientes</a>                
                 <a href="{% url 'contacto' %}" class="nav-item nav-link">Contacto</a>
                 <button id="btn2" class="btn" data-toggle="modal" data-target="#modal-login">Acceso</button>
             </div>
@@ -85,61 +85,37 @@
     </nav>
     <!-- Navbar Final -->
 
-    <!-- Page Header Inicio -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-3 text-white mb-4 animated slideInDown">Nuestros clientes</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Clientes</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header Fin -->
-
-
-    <!-- Clientes Inicio -->
+    <!-- Productos Inicio -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">Clientes empresariales</p>
-                <h1 class="mb-5">Experiencias de clientes</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded p-4">
-                        <img class="img-fluid rounded mb-4" src="{% static 'easytruck/img/team-2.jpg' %}" alt="">
-                        <h5>Walmart</h5>
-                        <p class="text-primary">"¡Increíblemente impresionado con la eficiencia del software de gestión de flotas! 
-                            Desde que implementamos esta solución, hemos visto una reducción significativa en nuestros costos operativos
-                             y una mejora notable en la productividad de nuestra flota. ¡Altamente recomendado!"</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded p-4">
-                        <img class="img-fluid rounded mb-4" src="{% static 'easytruck/img/team-1.jpg' %}" alt="">
-                        <h5>Sodimac</h5>
-                        <p class="text-primary">"La seguridad de nuestra flota ha alcanzado un nuevo nivel desde que comenzamos a utilizar 
-                            las soluciones de monitoreo y seguridad de esta empresa. Las cámaras de seguridad y los sistemas de seguimiento 
-                            GPS nos han brindado tranquilidad y control total sobre nuestras operaciones. ¡Gracias por su excelente servicio!"</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded p-4">
-                        <img class="img-fluid rounded mb-4" src="{% static 'easytruck/img/team-3.jpg' %}" alt="">
-                        <h5>Minuto verde</h5>
-                        <p class="text-primary">"No puedo expresar lo suficiente lo fácil que ha sido trabajar con esta empresa de control de 
-                            flota. Desde el primer contacto, han sido increíblemente receptivos a nuestras necesidades y preocupaciones. Su equipo 
-                            ha demostrado un profundo conocimiento del sector y nos ha brindado soluciones personalizadas que han transformado nuestra
-                             operación. ¡No podríamos estar más satisfechos con los resultados obtenidos!"</p>
-                    </div>
+        <div class="container d-grid justify-items-center">
+            <div class="card w-25">
+                <div class="container mt-5 mb-5">
+                    <h2 class="text-center mb-4">Clientes</h2>
+                    <p class="text-danger">* Debes iniciar sesion para agregar tu producto</p>
+                    <form>
+                        <div class="form-group mt-4">
+                            <label class="mb-2" for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Introduce tu correo electrónico" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label class="mb-2" for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Introduce tu contraseña" required>
+                        </div>
+                        <p class="mt-4 text-decoration-underline"><a href="#" class="text-muted">Olvisate tu contraseña</a></p>
+                        <div class="text-center ">
+                            <button type="submit" class="btn btn-primary text-white btn-block mt-5">Iniciar Sesión</button>
+                        </div>
+                        <div class="text-center ">
+                            <a href="{% url 'regCliente' %}">
+                                <button type="button" class="btn btn-gray btn-block mt-3">Registrarse</button>
+                            </a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Clientes Fin -->
+    <!-- Productos Fin -->
 
     <!-- Footer Inicio -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">

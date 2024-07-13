@@ -21,15 +21,15 @@
     {% load static %}
 
         <!-- Librerias de hojas de estilos -->
-        <link href= "{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
-        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+        <link href= "{% static 'easytruck/lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'easytruck/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'easytruck/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
 
         <!-- Libreria css Bootstrap 5.0 -->
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'easytruck/css/bootstrap.min.css' %}" rel="stylesheet">
 
         <!-- Hoja estilo adicional -->
-        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'easytruck/css/style.css' %}" rel="stylesheet">
 
 </head>
 
@@ -58,7 +58,8 @@
                 <a href="{% url 'clientes' %}" class="nav-item nav-link">Clientes</a>                
                 <a href="{% url 'contacto' %}" class="nav-item nav-link">Contacto</a>
                
-                <button id="btn2" class="btn" data-toggle="modal" data-target="#modal-login">Acceso</button>
+                <button id="btn3" class="btn" data-toggle="modal" data-target="#modal-login">Ing. Clientes</button>
+                <button id="btn2" class="btn" data-toggle="modal" data-target="#modal-login">Ing. Admin</button>
             </div>
             
         </div>
@@ -71,7 +72,7 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
+                    <img class="w-100" src="{% static 'easytruck/img/carousel-1.jpg' %}" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -84,7 +85,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">
+                    <img class="w-100" src="{% static 'easytruck/img/carousel-2.jpg' %}" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -125,13 +126,13 @@
                         </div>
                     </div>
                     <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid rounded" src="{% static 'img/service-1.jpg' %}">
+                        <img class="img-fluid rounded" src="{% static 'easytruck/img/service-1.jpg' %}">
                     </div>
                     <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                        <img class="img-fluid rounded" src="{% static 'img/camion.jpg' %}">
+                        <img class="img-fluid rounded" src="{% static 'easytruck/img/camion.jpg' %}">
                     </div>
                     <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
-                        <img class="img-fluid rounded" src="{% static 'img/cont_flota.jpg' %}">
+                        <img class="img-fluid rounded" src="{% static 'easytruck/img/cont_flota.jpg' %}">
                     </div>
                 </div>
             </div>
@@ -143,17 +144,17 @@
                     mejorar la eficiencia operativa y reducir costos.</p>
                 <div class="row g-5 pt-2 mb-5">
                     <div class="col-sm-6">
-                        <img class=".img-fluid mb-4" src="img/gps.png" alt="">
+                        <img class=".img-fluid mb-4" src="easytruck/img/gps.png" alt="">
                         <h5 class="mb-3">Seguimiento en tiempo real</h5>
                         <span>Permite monitorear la ubicación y el estado de los vehículos de la flota en tiempo real mediante GPS u otras tecnologías de seguimiento.</span>
                     </div>
                     <div class="col-sm-6">
-                        <img class=".img-fluid mb-4" src="img/conductores.png" alt="">
+                        <img class=".img-fluid mb-4" src="easytruck/img/conductores.png" alt="">
                         <h5 class="mb-3">Gestión de conductores</h5>
                         <span>Permite administrar la información y el historial de los conductores de la flota, incluyendo licencias, capacitaciones, registros de horas de trabajo, etc.</span>
                     </div>
                 </div>
-                <a class="btn btn-secondary rounded-pill py-3 px-5" href="servicios.html">Ver más</a>
+                <a class="btn btn-secondary rounded-pill py-3 px-5" href="{% url 'nosotros' %}">Ver más</a>
             </div>
         </div>
     </div>
@@ -267,17 +268,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
-    <script src="{% static 'lib/parallax/parallax.min.js' %}"></script>
-    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'easytruck/lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'easytruck/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'easytruck/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'easytruck/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'easytruck/lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'easytruck/lib/parallax/parallax.min.js' %}"></script>
+    <script src="{% static 'easytruck/lib/lightbox/js/lightbox.min.js' %}"></script>
 
     <!-- Hoja javascript independiente -->
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/javascript_local.js' %}"></script>
+    <script src="{% static 'easytruck/js/main.js' %}"></script>
+    <script src="{% static 'easytruck/js/javascript_local.js' %}"></script>
     
         
     
