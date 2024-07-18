@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
-{% block title %} Easy Truck - Login {% endblock %}
+{% block title %} Easy Truck - Inicio {% endblock %}
 {% load static %}
 {% block content %}
-<!-- Login Inicio -->
 <div class="container-xxl py-5">
     <div class="container d-grid justify-items-center">
         <div class="card w-25">
             <div class="container mt-5 mb-5">
-                <h2 class="text-center mb-4">Clientes</h2>
-                <p class="text-danger">* Debes iniciar sesion para agregar tu producto</p>
+                <h2 class="text-center mb-4">Administración</h2>
+                <p class="text-danger">* Correo y contraseña invalidos</p>
                 <form>
                     <div class="form-group mt-4">
                         <label class="mb-2" for="email">Correo Electrónico</label>
@@ -22,15 +21,10 @@
                     <div class="text-center ">
                         <button type="submit" class="btn btn-primary text-white btn-block mt-5">Iniciar Sesión</button>
                     </div>
-                    <div class="text-center ">
-                        <a href="{% url 'regCliente' %}">
-                            <button type="button" class="btn btn-gray btn-block mt-3">Registrarse</button>
-                        </a>
-                    </div>
+                   
                 </form>
             </div>
         </div>
     </div>
 </div>
-<!-- Login Fin -->
 {% endblock %}

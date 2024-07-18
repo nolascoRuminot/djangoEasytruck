@@ -9,8 +9,11 @@ urlpatterns = [
     path('clientes/', views.clientes, name='clientes'),
     path('contacto/', views.contacto, name='contacto'),
     path('carrito/', views.carrito, name='carrito'),
+    
     path('login-admin/', views.loginAdmin, name='logAdmin'),
     path('login-cliente/', views.loginCliente, name='logCliente'),
     path('registro-cliente/', views.regCli, name='regCliente'),
-    
+    path('registro-admin/', views.regAdmin, name='regAdmin'),
+    path('registrar/', views.registrarCli, name='registrar'),
+    path('admin/', views.registrarCli, name='admin'),
 ]

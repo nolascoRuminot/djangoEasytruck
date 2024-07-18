@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Easy Truck - Registro {% endblock %}
+{% block title %} Easy Truck - Inicio {% endblock %}
 {% load static %}
 {% block content %}
 <!-- Registro Inicio -->
@@ -7,9 +7,22 @@
     <div class="container d-grid justify-items-center">
         <div class="card w-50">
             <div class="container mt-5 mb-5">
-                <h2 class="text-center mb-4">Registro</h2>
-                <p class="text-danger">* Debes iniciar sesion para agregar tu producto</p>
-                <form>
+                <h2 class="text-center mb-4">Registro administrador</h2>
+                <p class="text-danger">{{ error }}</p>
+
+                <form action="{% url 'registrar' %}" method="post">
+
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                    <div class="text-center ">
+                        <button type="submit" class="btn btn-primary text-white btn-block mt-5">Registarse</button>
+                    </div>
+
+                </form>
+
+
+              <!--  <form>
                     <div class="form-group mt-4">
                         <label class="mb-2" for="nombre">Nombre completo</label>
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" required>
@@ -34,7 +47,7 @@
                             <button type="button" class="btn btn-gray btn-block mt-3">Login</button>
                         </a>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
