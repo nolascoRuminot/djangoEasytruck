@@ -8,7 +8,17 @@
             <div class="container mt-5 mb-5">
                 <h2 class="text-center mb-4">Administración</h2>
 
-                {{ mnsj }}
+                <p class="text-danger"> {{ eContr }}</p>
+                <p class="text-success"> {{ rgOk }}</p>
+                <form action="{% url 'ingresar' %}" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                    <div class="text-center ">
+                        <button type="submit" class="btn btn-primary text-white btn-block mt-5">Iniciar Sesión</button>
+                    </div>
+                </form>
+                <!--
                 <form>
                     <div class="form-group mt-4">
                         <label class="mb-2" for="email">Correo Electrónico</label>
@@ -24,6 +34,7 @@
                     </div>
                    
                 </form>
+                -->
             </div>
         </div>
     </div>

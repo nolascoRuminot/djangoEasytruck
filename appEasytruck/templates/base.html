@@ -57,8 +57,13 @@
                 <a href="{% url 'productos' %}" class="nav-item nav-link {% if request.path == '/productos/' %}active{% endif %}">Productos</a>
                 <a href="{% url 'clientes' %}" class="nav-item nav-link {% if request.path == '/clientes/' %}active{% endif %}">Clientes</a>
                 <a href="{% url 'contacto' %}" class="nav-item nav-link {% if request.path == '/contacto/' %}active{% endif %}">Contacto</a>
-                <button id="btn3" class="btn" data-toggle="modal" data-target="#modal-login">Ing. Clientes</button>
-                <button id="btn2" class="btn" data-toggle="modal" data-target="#modal-login">Ing. Admin</button>
+
+                {% if user.is_authenticated %}
+                    <a href="{% url 'cerrarSesion' %}" class="nav-item nav-link">Cerrar sesión</a>
+                {% else %}
+                    <a href="{% url 'logCliente' %}" class="nav-item nav-link {% if request.path == '/login-admin/' %}active{% endif %}">Ing. clientes</a>
+                    <a href="{% url 'logAdmin' %}" class="nav-item nav-link {% if request.path == '/login-admin/' %}active{% endif %}">(Intranet)</a>
+                {% endif %}
             </div>
             
         </div>

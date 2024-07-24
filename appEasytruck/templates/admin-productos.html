@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %} Easy Truck - Administración producto {% endblock %}
+{% load static %}
+{% block content %}
+<!-- -->
+<div class="container-xxl py-5">
+    <div class="container d-grid justify-items-center">
+        <div class="card w-100">
+            <div class="container mt-5 mb-5">
+                <h2 class="text-center mb-4">Productos</h2>
+                <p class="text-danger">{{ error }}</p>
+
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio UF</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for producto in tProducto %}
+                            <tr>
+                                <td><img src="{{ producto.imagen.url }}" alt="Producto" width="100"></td>
+                                <td>{{ producto.nombre }}</td>
+                                <td>{{ producto.descripcion }}</td>
+                                <td>{{ producto.preciouf }}</td>
+                                <td>{{ producto.stock }}</td>
+                                
+                                <td>
+                                    <a href="{% url 'actProd' producto.productoid %}"> 
+                                        <button class="btn btn-primary btn-sm">Editar</button>
+                                    </a>
+                                    <a href="{% url 'elimProd' producto.productoid %}"> 
+                                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+{% endblock %}
