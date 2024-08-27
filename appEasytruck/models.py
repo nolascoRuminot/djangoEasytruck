@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 import os
 import uuid
 
-# Función para generar nombres únicos de archivos
+
 def generate_unique_filename(instance, filename):
     extension = filename.split('.')[-1]  
     new_filename = f"{uuid.uuid4()}.{extension}" 

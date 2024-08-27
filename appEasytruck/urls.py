@@ -23,4 +23,7 @@ urlpatterns = [
     path('update-producto/<int:idProd>/', views.actProd, name='actProd'),
     path('eliminar-producto/<int:idProd>/', views.eliminarProd, name='elimProd'),
     path('cerrar-sesion/', views.cerrarSesion, name='cerrarSesion'),
+    path('crear-administrador/', views.registrarAdmin, name='addAdmin'),
+    
+
 ]

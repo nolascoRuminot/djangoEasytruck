@@ -23,7 +23,8 @@ def servicios(request):
 
 
 def productos(request):
-    return render(request, 'productos.html')
+    productos = Producto.objects.all()
+    return render(request, 'productos.html', {"productos": productos})
 
 @login_required
 def regProductosForm(request):
@@ -54,6 +55,7 @@ def clientes(request):
 
 def contacto(request):
     return render(request, 'contacto.html')
+    
 
 
 def carrito(request):
